@@ -7,7 +7,6 @@
     <url>www.com</url>
     <description>A sample Mirth plugin to showcase my Maven plugin</description>
     <serverClasses>
-        <string>com.kaurpalang.mirthpluginsample.server.MyServicePlugin</string>
         <string>com.jonbartels.mirthdashboard.server.servlet.ListeningPortServicePlugin</string>
     </serverClasses>
     <clientClasses>
@@ -15,13 +14,10 @@
         <string>com.jonbartels.mirthdashboard.GroupCountColumn</string>
         <string>com.jonbartels.mirthdashboard.DashboardListeningPortColumn</string>
         <string>com.jonbartels.mirthdashboard.ChannelListeningPortColumn</string>
-        <string>com.kaurpalang.mirthpluginsample.client.MySettingsPlugin</string>
     </clientClasses>
     <library path="mirth-dashboard-count-server.jar" type="SERVER"/>
     <library path="mirth-dashboard-count-shared.jar" type="SHARED"/>
     <library path="mirth-dashboard-count-client.jar" type="CLIENT"/>
-    <apiProvider name="com.kaurpalang.mirthpluginsample.shared.interfaces.MyServletInterface" type="SERVLET_INTERFACE"/>
     <apiProvider name="com.jonbartels.mirthdashboard.ListeningPortServletInterface" type="SERVLET_INTERFACE"/>
-    <apiProvider name="com.kaurpalang.mirthpluginsample.server.servlet.MyPluginServlet" type="SERVER_CLASS"/>
     <apiProvider name="com.jonbartels.mirthdashboard.server.servlet.ListeningPortServlet" type="SERVER_CLASS"/>
 </pluginMetaData>

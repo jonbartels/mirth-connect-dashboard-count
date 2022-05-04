@@ -1,9 +1,9 @@
 package com.jonbartels.mirthdashboard.server.servlet;
 
 import com.jonbartels.mirthdashboard.ListeningPortServletInterface;
+import com.jonbartels.mirthdashboard.server.DashboardCountConstants;
 import com.kaurpalang.mirth.annotationsplugin.annotation.ApiProvider;
 import com.kaurpalang.mirth.annotationsplugin.type.ApiProviderType;
-import com.kaurpalang.mirthpluginsample.shared.MyConstants;
 import com.mirth.connect.client.core.ClientException;
 import com.mirth.connect.donkey.model.channel.ConnectorProperties;
 import com.mirth.connect.donkey.model.channel.ListenerConnectorPropertiesInterface;
@@ -24,7 +24,7 @@ public class ListeningPortServlet extends MirthServlet implements ListeningPortS
     private Logger logger = Logger.getLogger(this.getClass());
 
     public ListeningPortServlet(@Context HttpServletRequest request, @Context SecurityContext sc) {
-        super(request, sc, MyConstants.PLUGIN_POINTNAME);
+        super(request, sc, DashboardCountConstants.PLUGIN_POINTNAME);
     }
 
     @Override

@@ -2,10 +2,8 @@ package com.jonbartels.mirthdashboard.server.servlet;
 
 import com.jonbartels.mirthdashboard.ListeningPortPermissions;
 import com.jonbartels.mirthdashboard.ListeningPortServletInterface;
+import com.jonbartels.mirthdashboard.server.DashboardCountConstants;
 import com.kaurpalang.mirth.annotationsplugin.annotation.ServerClass;
-import com.kaurpalang.mirthpluginsample.shared.MyConstants;
-import com.kaurpalang.mirthpluginsample.shared.MyPermissions;
-import com.kaurpalang.mirthpluginsample.shared.interfaces.MyServletInterface;
 import com.mirth.connect.client.core.api.util.OperationUtil;
 import com.mirth.connect.model.ExtensionPermission;
 import com.mirth.connect.plugins.ServicePlugin;
@@ -41,7 +39,7 @@ public class ListeningPortServicePlugin implements ServicePlugin {
     @Override
     public ExtensionPermission[] getExtensionPermissions() {
         ExtensionPermission getPermission = new ExtensionPermission (
-                MyConstants.PLUGIN_POINTNAME,
+                DashboardCountConstants.PLUGIN_POINTNAME,
                 ListeningPortPermissions.GETLISTENINGPORT,
                 "Allows listing listening ports in channel dashboard view",
                 OperationUtil.getOperationNamesForPermission(ListeningPortPermissions.GETLISTENINGPORT, ListeningPortServletInterface.class), new String[] {}
@@ -57,7 +55,7 @@ public class ListeningPortServicePlugin implements ServicePlugin {
 
     @Override
     public String getPluginPointName() {
-        return MyConstants.PLUGIN_POINTNAME;
+        return DashboardCountConstants.PLUGIN_POINTNAME;
     }
 
     @Override

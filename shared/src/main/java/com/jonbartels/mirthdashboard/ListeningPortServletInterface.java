@@ -2,7 +2,6 @@ package com.jonbartels.mirthdashboard;
 
 import com.kaurpalang.mirth.annotationsplugin.annotation.ApiProvider;
 import com.kaurpalang.mirth.annotationsplugin.type.ApiProviderType;
-import com.kaurpalang.mirthpluginsample.shared.model.MyInfoObject;
 import com.mirth.connect.client.core.ClientException;
 import com.mirth.connect.client.core.api.BaseServletInterface;
 import com.mirth.connect.client.core.api.MirthOperation;
@@ -28,8 +27,8 @@ public interface ListeningPortServletInterface extends BaseServletInterface {
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     @ApiResponse(responseCode = "200", description = "Found the information",
             content = {
-                    @Content(mediaType = MediaType.APPLICATION_JSON, schema = @Schema(implementation = MyInfoObject.class)),
-                    @Content(mediaType = MediaType.APPLICATION_XML, schema = @Schema(implementation = MyInfoObject.class))
+                    @Content(mediaType = MediaType.APPLICATION_JSON),
+                    @Content(mediaType = MediaType.APPLICATION_XML)
             })
     @MirthOperation(
             name = "getListeningPort",
