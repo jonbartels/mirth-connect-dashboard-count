@@ -8,6 +8,11 @@ import com.mirth.connect.plugins.ChannelColumnPlugin;
 import javax.swing.table.TableCellRenderer;
 import java.util.List;
 
+/**
+ * This physically can't work due to https://github.com/nextgenhealthcare/connect/issues/5171
+ *
+ * Exclude it from the plugin assembly by commenting out the @ClientClass annotation
+ */
 @ClientClass
 public class ChannelListeningPortColumn extends ChannelColumnPlugin {
     private final ListeningPortColumn listeningPortColumn;
@@ -49,8 +54,7 @@ public class ChannelListeningPortColumn extends ChannelColumnPlugin {
 
     @Override
     public boolean isDisplayFirst() {
-        //Workaround for https://github.com/nextgenhealthcare/connect/issues/5171
-        return true; //listeningPortColumn.isDisplayFirst();
+        return listeningPortColumn.isDisplayFirst();
     }
 
     @Override
