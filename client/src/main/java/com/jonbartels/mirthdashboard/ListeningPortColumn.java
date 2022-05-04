@@ -1,10 +1,94 @@
-package com.jonbartels.mirthdashboard;/**
+package com.jonbartels.mirthdashboard;
+
+import com.kaurpalang.mirth.annotationsplugin.annotation.ClientClass;
+import com.mirth.connect.client.ui.PlatformUI;
+import com.mirth.connect.client.ui.UIConstants;
+import com.mirth.connect.model.Channel;
+import com.mirth.connect.model.ChannelGroup;
+import com.mirth.connect.model.DashboardStatus;
+import com.mirth.connect.plugins.DashboardColumnPlugin;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.TableCellRenderer;
+import java.util.List;
+import org.apache.log4j.Logger;
+
+/**
  * You're viewing source code written by Zen Healthcare IT.
  * https://consultzen.com
- *
- * Created by jon.bartels on 4/29/22 for the mirthpluginsample project using only 
- *  locally sourced, organically grown, and humanely killed electrons.
- * 
+ * <p>
+ * Created by jon.bartels on 4/29/22 for the mirthpluginsample project using only
+ * locally sourced, organically grown, and humanely killed electrons.
  */
+@ClientClass
 public class ListeningPortColumn {
+    private Logger logger = Logger.getLogger(this.getClass());
+    private ListeningPortServletInterface listeningPortServletInterface;
+
+    public ListeningPortColumn() {
+        listeningPortServletInterface = PlatformUI.MIRTH_FRAME.mirthClient.getServlet(ListeningPortServletInterface.class);
+    }
+
+    public String getColumnHeader() {
+        return "Listening Port";
+    }
+
+    public Object getTableData(ChannelGroup channelGroup) {
+        return null;
+    }
+
+    public Object getTableData(String channelId) {
+        String listeningPort = "";
+
+        try {
+            listeningPort = listeningPortServletInterface.getListeningPort(channelId);
+        } catch (Exception e){
+            //pokemon exception handling is necessary here because the client code doesnt log well
+            //pokemon exception handling is necessary here because this code is called in a worker thread, failures just cause no output so we have to be very fault tolerant
+            logger.error("Caught exception while calculating listening ports for channelId: " + channelId, e);
+            System.out.println("Caught exception while calculating listening ports for channelId: " + channelId);
+            e.printStackTrace();
+        }
+
+        return listeningPort;
+    }
+
+    public Object getTableData(String channelId, Integer metaDataId) {
+        Object listeningPort = "";
+
+        if(metaDataId == null || metaDataId == 0){
+            listeningPort = getTableData(channelId);
+        }
+
+        return listeningPort;
+    }
+
+    public TableCellRenderer getCellRenderer() {
+        return new DefaultTableCellRenderer();
+    }
+
+    public int getMaxWidth() {
+        return UIConstants.MAX_WIDTH;
+    }
+
+    public int getMinWidth() {
+        return UIConstants.MIN_WIDTH;
+    }
+
+    public boolean isDisplayFirst() {
+        return false;
+    }
+
+    public String getPluginPointName() {
+        return "Channel Listening Port";
+    }
+
+    public void start() {
+
+    }
+
+    public void stop() {    }
+
+    public void reset() {
+
+    }
 }
