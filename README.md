@@ -1,6 +1,8 @@
 # mirth-connect-dashboard-count
 A Mirth Connect plugin to show the counts of channels in channel groups. 
 
+Also shows the listening port for HTTP, TCP, and WS connectors in the dashboard.
+
 # Original idea from Slack
 
 
