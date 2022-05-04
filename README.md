@@ -3,9 +3,13 @@ A Mirth Connect plugin to show the counts of channels in channel groups.
 
 Also shows the listening port for HTTP, TCP, and WS connectors in the dashboard.
 
-# Original idea from Slack
+# Origins
+## Listening port idea from MC Issues
 
+https://github.com/nextgenhealthcare/connect/issues/5152 and https://github.com/nextgenhealthcare/connect/issues/2115 proposed adding the listening ports to the dashboard and channel listing
 
+## Channel Group count idea from Slack
+```
 chris  17:23
 It would be great to show a count of channels in the Dashboard. Like a count in each group would meet my needs.
 
@@ -31,3 +35,4 @@ oh ya dude this might be easy
 com.mirth.connect.plugins.DashboardColumnPlugin implement one of those and make getColumnHeader return the header name and getTableData(ChannelGroup group) return group.getChannels().size() and do the plugin signing/ignore cert tango and it might work
 17:58
 the other abstract methods will just need a no-op implementation to return null or an empty object
+```
