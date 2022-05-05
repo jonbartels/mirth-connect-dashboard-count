@@ -1,9 +1,15 @@
 # mirth-connect-dashboard-count
 A Mirth Connect plugin to show the counts of channels in channel groups. 
 
-Also shows the listening port for HTTP, TCP, and WS connectors in the dashboard.
+Also shows the listening port for HTTP, TCP, and WS connectors.
 
-# Origins
+In the Dashboard:
+![count and ports columns in MC dashboard](https://github.com/jonbartels/mirth-connect-dashboard-count/blob/main/dashboard.png?raw=true)
+
+In the Channel list:
+Coming soon! There's an MC bug that prevents this from working but the plugin code is all ready to go.
+
+# Inspiration
 ## Listening port idea from MC Issues
 
 https://github.com/nextgenhealthcare/connect/issues/5152 and https://github.com/nextgenhealthcare/connect/issues/2115 proposed adding the listening ports to the dashboard and channel listing
