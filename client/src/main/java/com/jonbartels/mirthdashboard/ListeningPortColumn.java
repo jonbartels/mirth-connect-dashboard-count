@@ -23,7 +23,7 @@ public class ListeningPortColumn {
     }
 
     public Object getTableData(ChannelGroup channelGroup) {
-        return null;
+        return "lol wat";
     }
 
     public Object getTableData(String channelId) {
@@ -73,7 +73,6 @@ public class ListeningPortColumn {
     }
 
     public void start() {
-
     }
 
     public void stop() {    }

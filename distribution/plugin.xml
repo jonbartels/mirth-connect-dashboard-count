@@ -3,7 +3,7 @@
     <name>Sample testing plugin</name>
     <author>Kaur Palang</author>
     <pluginVersion>15</pluginVersion>
-    <mirthVersion>3.12.0</mirthVersion>
+    <mirthVersion>3.12.0, 4.2.0</mirthVersion>
     <url>www.com</url>
     <description>A sample Mirth plugin to showcase my Maven plugin</description>
     <serverClasses>
@@ -18,6 +18,6 @@
     <library path="mirth-dashboard-count-server.jar" type="SERVER"/>
     <library path="mirth-dashboard-count-shared.jar" type="SHARED"/>
     <library path="mirth-dashboard-count-client.jar" type="CLIENT"/>
-    <apiProvider name="com.jonbartels.mirthdashboard.ListeningPortServletInterface" type="SERVLET_INTERFACE"/>
     <apiProvider name="com.jonbartels.mirthdashboard.server.servlet.ListeningPortServlet" type="SERVER_CLASS"/>
+    <apiProvider name="com.jonbartels.mirthdashboard.ListeningPortServletInterface" type="SERVLET_INTERFACE"/>
 </pluginMetaData>

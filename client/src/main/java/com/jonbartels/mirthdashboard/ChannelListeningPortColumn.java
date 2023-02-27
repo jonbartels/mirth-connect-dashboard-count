@@ -24,11 +24,13 @@ public class ChannelListeningPortColumn extends ChannelColumnPlugin {
 
     @Override
     public String getColumnHeader() {
+        System.out.println("In getColumnHeader...");
         return listeningPortColumn.getColumnHeader();
     }
 
     @Override
     public Object getTableData(ChannelGroup channelGroup) {
+        System.out.println("In getTableData...");
         return listeningPortColumn.getTableData(channelGroup);
     }
 
@@ -60,6 +62,7 @@ public class ChannelListeningPortColumn extends ChannelColumnPlugin {
     @Override
     public void tableUpdate(List<Channel> list) {
 
+        System.out.println("In tableUpdate...");
     }
 
     @Override
@@ -69,7 +72,9 @@ public class ChannelListeningPortColumn extends ChannelColumnPlugin {
 
     @Override
     public void start() {
+        System.out.println("Starting...");
         listeningPortColumn.start();
+        System.out.println("Started...");
     }
 
     @Override

@@ -33,12 +33,12 @@ public class GroupCountColumn extends DashboardColumnPlugin {
 
     @Override
     public Object getTableData(String s) {
-        return null;
+        return "GroupCountColumn.getTableData(java.lang.String)";
     }
 
     @Override
     public Object getTableData(String s, Integer integer) {
-        return null;
+        return "getTableData(java.lang.String, java.lang.Integer)";
     }
 
     @Override

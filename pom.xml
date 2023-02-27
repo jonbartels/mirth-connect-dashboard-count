@@ -39,7 +39,7 @@
         <plugin.url>www.com</plugin.url>
         <plugin.author>Kaur Palang</plugin.author>
         <plugin.version>15</plugin.version>
-        <plugin.mirthVersion>3.12.0</plugin.mirthVersion>
+        <plugin.mirthVersion>3.12.0, 4.2.0</plugin.mirthVersion>
         <plugin.archive.name>sampleplugin</plugin.archive.name>
     </properties>
 
