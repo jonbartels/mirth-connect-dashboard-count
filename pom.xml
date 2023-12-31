@@ -21,7 +21,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <mirth.version>3.12.0</mirth.version>
+        <mirth.version>4.2.0</mirth.version>
 
         <maven-processor-plugin.version>4.5</maven-processor-plugin.version>
         <maven-assembly-plugin.version>3.3.0</maven-assembly-plugin.version>
@@ -34,28 +34,39 @@
         <processor.aggregator.path>distribution/aggregated.json</processor.aggregator.path>
 
         <!-- Plugin details -->
-        <plugin.path>plugintest</plugin.path>
-        <plugin.name>Sample testing plugin</plugin.name>
-        <plugin.url>www.com</plugin.url>
-        <plugin.author>Kaur Palang</plugin.author>
-        <plugin.version>15</plugin.version>
-        <plugin.mirthVersion>3.12.0, 4.2.0</plugin.mirthVersion>
-        <plugin.archive.name>sampleplugin</plugin.archive.name>
+        <plugin.path>dashboardcount</plugin.path>
+        <plugin.name>Dashboard Count</plugin.name>
+        <plugin.url>https://github.com/jonbartels/mirth-connect-dashboard-count</plugin.url>
+        <plugin.author>Jon Bartels</plugin.author>
+        <plugin.version>${project.version}</plugin.version>
+        <plugin.mirthVersion>${mirth.version}</plugin.mirthVersion>
+        <plugin.archive.name>dashboardcount</plugin.archive.name>
     </properties>
 
     <repositories>
         <repository>
-            <id>nexus</id>
-            <url>https://maven.kaurpalang.com/repository/maven-public/</url>
+            <id>repsy</id>
+            <url>https://repo.repsy.io/mvn/kpalang/default</url>
+        </repository>
+        <repository>
+            <id>repsy-mirthconnect</id>
+            <url>https://repo.repsy.io/mvn/kpalang/mirthconnect</url>
         </repository>
     </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>repsy-default</id>
+            <url>https://repo.repsy.io/mvn/kpalang/default</url>
+        </pluginRepository>
+    </pluginRepositories>
 
     <dependencies>
         <!-- Helper plugin to handle Mirth plugin specific tasks. -->
         <dependency>
             <groupId>com.kaurpalang</groupId>
             <artifactId>mirth-plugin-maven-plugin</artifactId>
-            <version>1.0.2-SNAPSHOT</version>
+            <version>2.0.1</version>
         </dependency>
 
         <dependency>
@@ -103,8 +114,7 @@
                         <configuration>
                             <!-- Specify annotation processor class -->
                             <processors>
-                                <processor>com.kaurpalang.mirth.annotationsplugin.processor.MirthPluginProcessor
-                                </processor>
+                                <processor>com.kaurpalang.mirth.annotationsplugin.processor.MirthPluginProcessor</processor>
                             </processors>
 
                             <options>

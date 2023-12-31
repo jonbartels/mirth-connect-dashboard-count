@@ -1,6 +1,6 @@
 package com.jonbartels.mirthdashboard;
 
-import com.kaurpalang.mirth.annotationsplugin.annotation.ClientClass;
+import com.kaurpalang.mirth.annotationsplugin.annotation.MirthClientClass;
 import com.mirth.connect.client.ui.PlatformUI;
 import com.mirth.connect.client.ui.UIConstants;
 import com.mirth.connect.model.ChannelGroup;
@@ -9,7 +9,7 @@ import javax.swing.table.TableCellRenderer;
 import java.util.List;
 import org.apache.log4j.Logger;
 
-@ClientClass
+@MirthClientClass
 public class ListeningPortColumn {
     private Logger logger = Logger.getLogger(this.getClass());
     private ListeningPortServletInterface listeningPortServletInterface;

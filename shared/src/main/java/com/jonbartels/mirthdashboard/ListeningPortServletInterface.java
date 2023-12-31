@@ -1,7 +1,5 @@
 package com.jonbartels.mirthdashboard;
 
-import com.kaurpalang.mirth.annotationsplugin.annotation.ApiProvider;
-import com.kaurpalang.mirth.annotationsplugin.type.ApiProviderType;
 import com.mirth.connect.client.core.ClientException;
 import com.mirth.connect.client.core.api.BaseServletInterface;
 import com.mirth.connect.client.core.api.MirthOperation;
@@ -11,6 +9,8 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import com.kaurpalang.mirth.annotationsplugin.annotation.MirthApiProvider;
+import com.kaurpalang.mirth.annotationsplugin.type.*;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -19,7 +19,7 @@ import javax.ws.rs.core.MediaType;
 @Tag(name = "Bartels Mirth Dashboard")
 @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
 @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-@ApiProvider(type = ApiProviderType.SERVLET_INTERFACE)
+@MirthApiProvider(type = com.kaurpalang.mirth.annotationsplugin.type.ApiProviderType.SERVLET_INTERFACE)
 public interface ListeningPortServletInterface extends BaseServletInterface {
     @GET
     @Path("/{channelId}")

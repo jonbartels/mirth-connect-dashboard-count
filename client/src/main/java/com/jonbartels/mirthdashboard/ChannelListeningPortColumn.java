@@ -1,6 +1,6 @@
 package com.jonbartels.mirthdashboard;
 
-import com.kaurpalang.mirth.annotationsplugin.annotation.ClientClass;
+import com.kaurpalang.mirth.annotationsplugin.annotation.MirthClientClass;
 import com.mirth.connect.model.Channel;
 import com.mirth.connect.model.ChannelGroup;
 import com.mirth.connect.plugins.ChannelColumnPlugin;
@@ -13,7 +13,7 @@ import java.util.List;
  *
  * Exclude it from the plugin assembly by commenting out the @ClientClass annotation
  */
-@ClientClass
+@MirthClientClass
 public class ChannelListeningPortColumn extends ChannelColumnPlugin {
     private final ListeningPortColumn listeningPortColumn;
 

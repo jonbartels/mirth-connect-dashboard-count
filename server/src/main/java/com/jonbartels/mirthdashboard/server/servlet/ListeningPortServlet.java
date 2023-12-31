@@ -2,7 +2,6 @@ package com.jonbartels.mirthdashboard.server.servlet;
 
 import com.jonbartels.mirthdashboard.ListeningPortServletInterface;
 import com.jonbartels.mirthdashboard.server.DashboardCountConstants;
-import com.kaurpalang.mirth.annotationsplugin.annotation.ApiProvider;
 import com.kaurpalang.mirth.annotationsplugin.type.ApiProviderType;
 import com.mirth.connect.client.core.ClientException;
 import com.mirth.connect.donkey.model.channel.ConnectorProperties;
@@ -14,12 +13,12 @@ import com.mirth.connect.server.controllers.ControllerFactory;
 import com.mirth.connect.server.controllers.EngineController;
 import com.mirth.connect.server.util.TemplateValueReplacer;
 import org.apache.log4j.Logger;
-
+import com.kaurpalang.mirth.annotationsplugin.annotation.MirthApiProvider;
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.SecurityContext;
 
-@ApiProvider(type = ApiProviderType.SERVER_CLASS)
+@MirthApiProvider(type = ApiProviderType.SERVER_CLASS)
 public class ListeningPortServlet extends MirthServlet implements ListeningPortServletInterface {
     private Logger logger = Logger.getLogger(this.getClass());
 

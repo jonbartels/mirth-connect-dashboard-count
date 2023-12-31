@@ -1,23 +1,3 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<pluginMetaData path="plugintest">
-    <name>Sample testing plugin</name>
-    <author>Kaur Palang</author>
-    <pluginVersion>15</pluginVersion>
-    <mirthVersion>3.12.0, 4.2.0</mirthVersion>
-    <url>www.com</url>
-    <description>A sample Mirth plugin to showcase my Maven plugin</description>
-    <serverClasses>
-        <string>com.jonbartels.mirthdashboard.server.servlet.ListeningPortServicePlugin</string>
-    </serverClasses>
-    <clientClasses>
-        <string>com.jonbartels.mirthdashboard.ListeningPortColumn</string>
-        <string>com.jonbartels.mirthdashboard.GroupCountColumn</string>
-        <string>com.jonbartels.mirthdashboard.DashboardListeningPortColumn</string>
-        <string>com.jonbartels.mirthdashboard.ChannelListeningPortColumn</string>
-    </clientClasses>
-    <library path="mirth-dashboard-count-server.jar" type="SERVER"/>
-    <library path="mirth-dashboard-count-shared.jar" type="SHARED"/>
-    <library path="mirth-dashboard-count-client.jar" type="CLIENT"/>
-    <apiProvider name="com.jonbartels.mirthdashboard.server.servlet.ListeningPortServlet" type="SERVER_CLASS"/>
-    <apiProvider name="com.jonbartels.mirthdashboard.ListeningPortServletInterface" type="SERVLET_INTERFACE"/>
+<pluginMetaData>
 </pluginMetaData>

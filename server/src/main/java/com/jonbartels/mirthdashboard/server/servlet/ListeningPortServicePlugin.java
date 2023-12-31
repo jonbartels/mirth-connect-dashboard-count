@@ -3,16 +3,16 @@ package com.jonbartels.mirthdashboard.server.servlet;
 import com.jonbartels.mirthdashboard.ListeningPortPermissions;
 import com.jonbartels.mirthdashboard.ListeningPortServletInterface;
 import com.jonbartels.mirthdashboard.server.DashboardCountConstants;
-import com.kaurpalang.mirth.annotationsplugin.annotation.ServerClass;
 import com.mirth.connect.client.core.api.util.OperationUtil;
 import com.mirth.connect.model.ExtensionPermission;
 import com.mirth.connect.plugins.ServicePlugin;
+import com.kaurpalang.mirth.annotationsplugin.annotation.MirthServerClass;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
-@ServerClass
+@MirthServerClass
 public class ListeningPortServicePlugin implements ServicePlugin {
     @Override
     public void init(Properties properties) {
