@@ -7,7 +7,7 @@ In the Dashboard:
 ![count and ports columns in MC dashboard](https://github.com/jonbartels/mirth-connect-dashboard-count/blob/main/dashboard.png?raw=true)
 
 In the Channel list:
-Coming soon! There's an MC bug that prevents this from working but the plugin code is all ready to go.
+Coming soon! There's an [MC bug](https://github.com/nextgenhealthcare/connect/issues/6046) that prevents this from working but the plugin code is all ready to go. 
 
 # Inspiration
 ## Listening port idea from MC Issues

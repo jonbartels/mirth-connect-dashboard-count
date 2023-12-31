@@ -1,6 +1,6 @@
 package com.jonbartels.mirthdashboard;
 
-import com.kaurpalang.mirth.annotationsplugin.annotation.ClientClass;
+import com.kaurpalang.mirth.annotationsplugin.annotation.MirthClientClass;
 import com.mirth.connect.model.ChannelGroup;
 import com.mirth.connect.model.DashboardStatus;
 import com.mirth.connect.plugins.DashboardColumnPlugin;
@@ -8,7 +8,7 @@ import com.mirth.connect.plugins.DashboardColumnPlugin;
 import javax.swing.table.TableCellRenderer;
 import java.util.List;
 
-@ClientClass
+@MirthClientClass
 public class DashboardListeningPortColumn extends DashboardColumnPlugin  {
     private final ListeningPortColumn listeningPortColumn;
 

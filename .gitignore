@@ -1,3 +1,7 @@
+#Kaur Palang plugin build files
+distribution/plugin.xml
+plugindata.json
+
 #jenv config file
 .java-version
 
