@@ -9,9 +9,8 @@ import javax.swing.table.TableCellRenderer;
 import java.util.List;
 
 /**
- * This physically can't work due to https://github.com/nextgenhealthcare/connect/issues/5171
- *
- * Exclude it from the plugin assembly by commenting out the @ClientClass annotation
+ * This physically can't work due to https://github.com/nextgenhealthcare/connect/issues/6046
+ * It doesn't error but won't display the columns on the first login.
  */
 @MirthClientClass
 public class ChannelListeningPortColumn extends ChannelColumnPlugin {

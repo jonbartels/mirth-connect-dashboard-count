@@ -1,6 +1,7 @@
 package com.jonbartels.mirthdashboard;
 
 import com.kaurpalang.mirth.annotationsplugin.annotation.MirthClientClass;
+import com.mirth.connect.client.ui.LoadedExtensions;
 import com.mirth.connect.client.ui.PlatformUI;
 import com.mirth.connect.client.ui.UIConstants;
 import com.mirth.connect.model.ChannelGroup;
