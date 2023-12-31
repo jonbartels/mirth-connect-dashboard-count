@@ -21,17 +21,17 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <mirth.version>4.2.0</mirth.version>
+        <mirth.version>4.4.1</mirth.version>
 
         <maven-processor-plugin.version>4.5</maven-processor-plugin.version>
         <maven-assembly-plugin.version>3.3.0</maven-assembly-plugin.version>
         <maven-jarsigner-plugin.version>3.0.0</maven-jarsigner-plugin.version>
-        <mirth-plugin-maven-plugin.version>1.0.2-SNAPSHOT</mirth-plugin-maven-plugin.version>
+        <mirth-plugin-maven-plugin.version>2.0.1</mirth-plugin-maven-plugin.version>
         <lombok.version>1.18.22</lombok.version>
         <miglayout.version>3.7.4</miglayout.version>
 
         <!-- Where should annotation processor generate aggregation file -->
-        <processor.aggregator.path>distribution/aggregated.json</processor.aggregator.path>
+        <processor.aggregator.path>plugindata.json</processor.aggregator.path>
 
         <!-- Plugin details -->
         <plugin.path>dashboardcount</plugin.path>
@@ -41,6 +41,7 @@
         <plugin.version>${project.version}</plugin.version>
         <plugin.mirthVersion>${mirth.version}</plugin.mirthVersion>
         <plugin.archive.name>dashboardcount</plugin.archive.name>
+        <plugin.aggregatorPath>plugindata.json</plugin.aggregatorPath>
     </properties>
 
     <repositories>
@@ -66,7 +67,7 @@
         <dependency>
             <groupId>com.kaurpalang</groupId>
             <artifactId>mirth-plugin-maven-plugin</artifactId>
-            <version>2.0.1</version>
+            <version>${mirth-plugin-maven-plugin.version}</version>
         </dependency>
 
         <dependency>
@@ -139,7 +140,7 @@
                 </executions>
                 <configuration>
                     <keystore>${project.parent.basedir}/certificate/keystore.jks</keystore>
-                    <alias>selfsigned2</alias>
+                    <alias>selfsigned3</alias>
                     <storepass>storepass</storepass>
                     <keypass>keypass</keypass>
                 </configuration>
