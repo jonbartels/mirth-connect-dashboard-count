@@ -69,6 +69,11 @@
             <artifactId>mirth-plugin-maven-plugin</artifactId>
             <version>${mirth-plugin-maven-plugin.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.mirth.connect</groupId>
+            <artifactId>mirth-client</artifactId>
+            <version>${mirth.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>com.mirth.connect</groupId>
@@ -89,9 +94,14 @@
         </dependency>
 
         <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.16</version>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.22.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.22.1</version>
         </dependency>
     </dependencies>
 

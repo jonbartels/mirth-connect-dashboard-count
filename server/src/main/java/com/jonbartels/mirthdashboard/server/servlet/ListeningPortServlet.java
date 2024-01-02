@@ -12,7 +12,8 @@ import com.mirth.connect.server.api.MirthServlet;
 import com.mirth.connect.server.controllers.ControllerFactory;
 import com.mirth.connect.server.controllers.EngineController;
 import com.mirth.connect.server.util.TemplateValueReplacer;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import com.kaurpalang.mirth.annotationsplugin.annotation.MirthApiProvider;
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.core.Context;
@@ -20,7 +21,7 @@ import javax.ws.rs.core.SecurityContext;
 
 @MirthApiProvider(type = ApiProviderType.SERVER_CLASS)
 public class ListeningPortServlet extends MirthServlet implements ListeningPortServletInterface {
-    private Logger logger = Logger.getLogger(this.getClass());
+    private Logger logger = LogManager.getLogger();
 
     public ListeningPortServlet(@Context HttpServletRequest request, @Context SecurityContext sc) {
         super(request, sc, DashboardCountConstants.PLUGIN_POINTNAME);

@@ -30,5 +30,10 @@
             <artifactId>shared</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.mirth.connect.plugins</groupId>
+            <artifactId>globalmapviewer-shared</artifactId>
+            <version>${mirth.version}</version>
+        </dependency>
     </dependencies>
 </project>

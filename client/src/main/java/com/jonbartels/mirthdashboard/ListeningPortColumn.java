@@ -8,11 +8,13 @@ import com.mirth.connect.model.ChannelGroup;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableCellRenderer;
 import java.util.List;
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @MirthClientClass
 public class ListeningPortColumn {
-    private Logger logger = Logger.getLogger(this.getClass());
+    private Logger logger = LogManager.getLogger();
     private ListeningPortServletInterface listeningPortServletInterface;
 
     public ListeningPortColumn() {
